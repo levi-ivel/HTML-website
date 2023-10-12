@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel = "stylesheet" href="StyleSheetTemplate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Business website</title>
+  </head>
+  <style>
+body {
+  
+  background-image: url("simon-spring-3zspxuasaq4-unsplash.webp");
+
+
+  height: 100%;
+
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+  body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+  
+    .page-title {
+      color: rgb(7, 5, 36);
+  font-size: 30px;
+  margin-bottom: 20px;
+  letter-spacing: 10px;
+}
+    
+    .image-container {
+      display: flex;
+      align-items: flex-start;
+      height: 65vh;
+    }
+    
+    .image-wrapper {
+      position: relative;
+    }
+    
+    .hover-image {
+      width: 550px;
+      height: 400px;
+      margin: 0 40px;
+      transition: transform 0.3s;
+    }
+    
+    .info {
+      position: absolute;
+      top: 100%; 
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      display: none;
+    }
+    
+    .image-wrapper:hover .info {
+      display: block;
+    }
+    
+    .hover-image:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+</style>
+  </head>
+  <body>
+    <h1 class="page-title">Our Star Locations</h1>
+    <header>
+      <img src="afbeelding_2023-10-02_124015194-removebg-preview.png">
+    <nav>
+      <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./zonreizen.html">Holidays</a></li>
+          <li><a href="./locations.html">Locations</a></li>
+          <li><a href="./pricing.html">Pricing</a></li>
+          <li><a href="./credits.html">Mastermind</a></li>
+      </ul>
+  </nav>
+</header>
+<div class="image-container">
+  <div class="image-wrapper" onclick="redirectTo('Italy.html')">
+    <img src="Amalfi-Italy.webp" alt="Image 1" class="hover-image" id="image1">
+    <div class="info" id="info1">Italy</div>
+  </div>
+  <div class="image-wrapper" onclick="redirectTo('Greece.html')">
+    <img src="shutterstockRF_1563449509.avif" alt="Image 2" class="hover-image" id="image2">
+    <div class="info" id="info2">Greece</div>
+  </div>
+  <div class="image-wrapper" onclick="redirectTo('Sweden.html')">
+    <img src="wp9247407.jpg" alt="Image 3" class="hover-image" id="image3">
+    <div class="info" id="info3">Sweden</div>
+  </div>
+</div>
+<div class="footer-dark">
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-6 col-md-3 item">
+                  <h3>Services</h3>
+                  <ul>
+                      <li><a href="./credits.html">Web design</a></li>
+                      <li><a href="./credits.html">Development</a></li>
+                      <li><a href="./credits.html">Hosting</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-6 col-md-3 item">
+                  <h3>About</h3>
+                  <ul>
+                      <li><a href="./about.html">Company</a></li>
+                      <li><a href="./credits.html">Team</a></li>
+                      <li><a href="./about.html">I ran out of ideas</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-6 item text">
+                  <h3>Happy Travel</h3>
+                  <p>We at Happy Travel pride ourselves in cheap, quality and conventient travel options to a wide range of locations!</p>
+              </div>
+              <div class="col iteAm social"><a href="https://www.facebook.com/TUINederland/?locale=nl_NL"><i class="icon ion-social-facebook"></i></a><a href="https://twitter.com/TUINederland"><i class="icon ion-social-twitter"></i></a><a href="https://www.snapchat.com/add/tuibelgium"><i class="icon ion-social-snapchat"></i></a><a href="https://www.instagram.com/levi.kingma/"><i class="icon ion-social-instagram"></i></a></div>
+          </div>
+          <p class="copyright">Happy Travel Inc. © 2023</p>
+      </div>
+  </footer>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+<script>
+  function redirectTo(page) {
+    window.location.href = page;
+  }
+</script>
+<script> document.getElementById('image1').addEventListener('mouseover', function () {
+  document.body.style.backgroundImage = 'url("Amalfi-Italy.webp")';
+});
+
+document.getElementById('image2').addEventListener('mouseover', function () {
+  document.body.style.backgroundImage = 'url("shutterstockRF_1563449509.avif")';
+});
+
+document.getElementById('image3').addEventListener('mouseover', function () {
+  document.body.style.backgroundImage = 'url("wp9247407.jpg")';
+});
+
+function showInfo(imageId) {
+  const infoElement = document.getElementById('info' + imageId);
+  infoElement.style.display = 'block';
+}
+
+document.getElementById('image1').addEventListener('click', function () {
+  showInfo(1);
+});
+
+document.getElementById('image2').addEventListener('click', function () {
+  showInfo(2);
+});
+
+document.getElementById('image3').addEventListener('click', function () {
+  showInfo(3);
+});</script>
+  </body>
+</html>
